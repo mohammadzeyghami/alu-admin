@@ -3,7 +3,11 @@ export interface IconProps {
   width?: string;
   height?: string;
 }
-const HomeIcon = ({ color, width, height }: IconProps) => {
+const HomeIcon = ({
+  color = "#000",
+  width = "20px",
+  height = "20px",
+}: IconProps) => {
   return (
     <svg
       width={width}

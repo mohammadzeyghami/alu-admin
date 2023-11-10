@@ -1,18 +1,23 @@
 import { Content } from "antd/es/layout/layout";
-import { Sider, View } from "../../..";
+import { Sider } from "../../..";
 import Header from "../../../atoms/header";
 import Layout from "../../../atoms/layout";
 
 import Footer from "../../../atoms/footer";
 
-interface MainDashProps {
+export interface MainDashProps {
   footer?: React.ReactNode;
   children?: React.ReactNode;
   sidebar?: React.ReactNode;
   header?: React.ReactNode;
 }
 
-const MainDash = ({ footer, children, sidebar, header }: MainDashProps) => {
+const MainDashLayout = ({
+  footer,
+  children,
+  sidebar,
+  header,
+}: MainDashProps) => {
   return (
     <Layout className="h-full min-h-[100vh]">
       <Header>{header}</Header>
@@ -25,4 +30,4 @@ const MainDash = ({ footer, children, sidebar, header }: MainDashProps) => {
   );
 };
 
-export { MainDash };
+export { MainDashLayout };

@@ -5,10 +5,11 @@ export default {
     extend: {
       colors: {
         gray: {
-          light: "F6F6FB",
+          light: "#F6F6FB",
         },
         primary: {
-          main: "7166F9",
+          main: "#7166F9",
+          light: "#7166F9",
         },
       },
     },

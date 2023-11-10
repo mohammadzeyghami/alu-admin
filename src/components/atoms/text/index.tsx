@@ -1,10 +1,12 @@
-import { Typography } from "antd";
-interface TextProps {
+interface TextProps
+  extends React.DetailedHTMLProps<
+    React.HTMLAttributes<HTMLParagraphElement>,
+    HTMLParagraphElement
+  > {
   children?: React.ReactNode;
 }
 const Text = ({ children, ...rest }: TextProps) => {
-  const { Text } = Typography;
-  return <Text {...rest}>{children}</Text>;
+  return <p {...rest}>{children}</p>;
 };
 
 export { Text };
