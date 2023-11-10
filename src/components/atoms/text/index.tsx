@@ -1,5 +1,5 @@
-import { Typography, TypographyProps } from "antd";
-interface TextProps extends TypographyProps {
+import { Typography } from "antd";
+interface TextProps {
   children?: React.ReactNode;
 }
 const Text = ({ children, ...rest }: TextProps) => {
