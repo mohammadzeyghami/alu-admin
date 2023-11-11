@@ -19,6 +19,58 @@ function App() {
         </MainDashLayout>
       ),
     },
+    {
+      path: Routes.categories.root,
+      element: (
+        <MainDashLayout
+          header={
+            <div className="w-full justify-center flex h-[40px]">Navbar</div>
+          }
+          sidebar={<MainSidebar />}
+        >
+          <div>asds</div>
+        </MainDashLayout>
+      ),
+    },
+    {
+      path: Routes.posts.root,
+      element: (
+        <MainDashLayout
+          header={
+            <div className="w-full justify-center flex h-[40px]">Navbar</div>
+          }
+          sidebar={<MainSidebar />}
+        >
+          <div>asds</div>
+        </MainDashLayout>
+      ),
+    },
+    {
+      path: Routes.products.root,
+      element: (
+        <MainDashLayout
+          header={
+            <div className="w-full justify-center flex h-[40px]">Navbar</div>
+          }
+          sidebar={<MainSidebar />}
+        >
+          <div>asds</div>
+        </MainDashLayout>
+      ),
+    },
+    {
+      path: Routes.setting.root,
+      element: (
+        <MainDashLayout
+          header={
+            <div className="w-full justify-center flex h-[40px]">Navbar</div>
+          }
+          sidebar={<MainSidebar />}
+        >
+          <div>asds</div>
+        </MainDashLayout>
+      ),
+    },
   ]);
 
   return <RouterProvider router={router} />;
