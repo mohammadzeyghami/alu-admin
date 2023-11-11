@@ -8,6 +8,6 @@ export const useCurrentLocation = () => {
 };
 export const useActivelocation = ({ target }: activeLocationProps) => {
   const location = useCurrentLocation();
-  console.log({ target });
+
   return location?.indexOf(target) !== -1;
 };

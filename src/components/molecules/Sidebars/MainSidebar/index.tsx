@@ -1,9 +1,8 @@
 import { Menu } from "antd";
-import { SiderCell, Text, View } from "../../..";
+import { SiderCell, View } from "../../..";
 
 import { useState } from "react";
 
-import { Link } from "react-router-dom";
 import Routes from "../../../../routes";
 
 const MainSidebar = () => {
@@ -23,33 +22,40 @@ const MainSidebar = () => {
         mode="vertical"
         className="w-full"
       >
-        <SiderCell key="home" keyName="home">
-          <Link to={Routes.overview.root}>
-            <Text className="text-black">Home</Text>
-          </Link>
-        </SiderCell>
-        <SiderCell key="user" keyName="user">
-          <Link to={Routes.posts.root}>
-            <Text className="text-black">Charts</Text>
-          </Link>
-        </SiderCell>
-        <SiderCell key="settings" keyName="settings">
-          <Link to={Routes.categories.root}>
-            <Text className="text-black">Setting</Text>
-          </Link>
-        </SiderCell>
-        <SiderCell key="charts" keyName="charts">
-          <Link to={Routes.products.root}>
-            {" "}
-            <Text className="text-black">LogOut</Text>
-          </Link>
-        </SiderCell>
-        <SiderCell key="charts" keyName="charts">
-          <Link to={Routes.setting.root}>
-            {" "}
-            <Text className="text-black">LogOut</Text>
-          </Link>
-        </SiderCell>
+        <SiderCell
+          key="home"
+          text="home"
+          to={Routes.dashboard.root}
+          keyName="home"
+        />
+
+        <SiderCell
+          key="categories"
+          text="categories"
+          to={Routes.dashboard.categories.root}
+          keyName="categories"
+        />
+
+        <SiderCell
+          key="posts"
+          keyName="posts"
+          text="posts"
+          to={Routes.dashboard.posts.root}
+        />
+
+        <SiderCell
+          text="products"
+          to={Routes.dashboard.products.root}
+          key="products"
+          keyName="products"
+        />
+
+        <SiderCell
+          text="settings"
+          to={Routes.dashboard.setting.root}
+          key="setting"
+          keyName="setting"
+        />
       </Menu>
     </View>
   );

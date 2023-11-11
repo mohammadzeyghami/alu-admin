@@ -1,79 +1,49 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Routes from "./routes";
-
+import { BrowserRouter, Route, Routes as Router } from "react-router-dom";
 import { MainDashLayout } from "./components/molecules";
 import MainSidebar from "./components/molecules/Sidebars/MainSidebar";
+import { DashboardRoutes } from "./components/pages";
 
 function App() {
-  const router = createBrowserRouter([
-    {
-      path: Routes.overview.root,
-      element: (
-        <MainDashLayout
-          header={
-            <div className="w-full justify-center flex h-[40px]">Navbar</div>
+  return (
+    <BrowserRouter>
+      <Router>
+        <Route
+          path={"dashboard"}
+          element={
+            <MainDashLayout
+              header={
+                <div className="w-full justify-center flex h-[40px]">
+                  Navbar
+                </div>
+              }
+              sidebar={<MainSidebar />}
+            >
+              <div>asds</div>
+            </MainDashLayout>
           }
-          sidebar={<MainSidebar />}
         >
-          <div>asds</div>
-        </MainDashLayout>
-      ),
-    },
-    {
-      path: Routes.categories.root,
-      element: (
-        <MainDashLayout
-          header={
-            <div className="w-full justify-center flex h-[40px]">Navbar</div>
+          <Route element={<div>Dashboard</div>} index></Route>
+          <Route element={<div>Dashboard</div>} path={"products"}></Route>
+          <Route element={<div>Dashboard</div>} path={"settings"}></Route>
+        </Route>
+        <Route
+          path="*"
+          element={
+            <MainDashLayout
+              header={
+                <div className="w-full justify-center flex h-[40px]">
+                  Navbar
+                </div>
+              }
+              sidebar={<MainSidebar />}
+            >
+              <DashboardRoutes />
+            </MainDashLayout>
           }
-          sidebar={<MainSidebar />}
-        >
-          <div>asds</div>
-        </MainDashLayout>
-      ),
-    },
-    {
-      path: Routes.posts.root,
-      element: (
-        <MainDashLayout
-          header={
-            <div className="w-full justify-center flex h-[40px]">Navbar</div>
-          }
-          sidebar={<MainSidebar />}
-        >
-          <div>asds</div>
-        </MainDashLayout>
-      ),
-    },
-    {
-      path: Routes.products.root,
-      element: (
-        <MainDashLayout
-          header={
-            <div className="w-full justify-center flex h-[40px]">Navbar</div>
-          }
-          sidebar={<MainSidebar />}
-        >
-          <div>asds</div>
-        </MainDashLayout>
-      ),
-    },
-    {
-      path: Routes.setting.root,
-      element: (
-        <MainDashLayout
-          header={
-            <div className="w-full justify-center flex h-[40px]">Navbar</div>
-          }
-          sidebar={<MainSidebar />}
-        >
-          <div>asds</div>
-        </MainDashLayout>
-      ),
-    },
-  ]);
-
-  return <RouterProvider router={router} />;
+        />
+      </Router>
+    </BrowserRouter>
+  );
 }
 
 export default App;
