@@ -1,12 +1,27 @@
 const Routes = {
-  dashboard: {
-    root: "/",
+  overview: {
+    root: "/home",
   },
-  about: {
-    root: "/about",
+  posts: {
+    root: "/posts",
+    edit: "/posts/edit",
+    add: "/posts/add",
+    remove: "/posts/remove",
   },
-  contact: {
-    root: "/contact",
+  categories: {
+    root: "/categories",
+    edit: "/categories/edit",
+    add: "/categories/add",
+    remove: "/categories/remove",
+  },
+  products: {
+    root: "/products",
+    edit: "/products/edit",
+    add: "/products/add",
+    remove: "/products/remove",
+  },
+  setting: {
+    root: "/setting",
   },
 };
 

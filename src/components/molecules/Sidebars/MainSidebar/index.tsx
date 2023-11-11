@@ -1,12 +1,15 @@
 import { Menu } from "antd";
-import { SiderCell, View } from "../../..";
+import { SiderCell, Text, View } from "../../..";
 
 import { useState } from "react";
+
+import { Link } from "react-router-dom";
+import Routes from "../../../../routes";
 
 const MainSidebar = () => {
   const [selectedKey, setSelectedKey] = useState("home"); // Initial selected key
 
-  const handleMenuClick = (e) => {
+  const handleMenuClick = (e: any) => {
     setSelectedKey(e?.key);
   };
   return (
@@ -20,17 +23,32 @@ const MainSidebar = () => {
         mode="vertical"
         className="w-full"
       >
-        <SiderCell selectedKey={selectedKey} key="home" keyName="home">
-          Home
+        <SiderCell key="home" keyName="home">
+          <Link to={Routes.overview.root}>
+            <Text className="text-black">Home</Text>
+          </Link>
         </SiderCell>
-        <SiderCell selectedKey={selectedKey} key="user" keyName="user">
-          User
+        <SiderCell key="user" keyName="user">
+          <Link to={Routes.posts.root}>
+            <Text className="text-black">Charts</Text>
+          </Link>
         </SiderCell>
-        <SiderCell selectedKey={selectedKey} key="settings" keyName="settings">
-          Settings
+        <SiderCell key="settings" keyName="settings">
+          <Link to={Routes.categories.root}>
+            <Text className="text-black">Setting</Text>
+          </Link>
         </SiderCell>
-        <SiderCell selectedKey={selectedKey} key="charts" keyName="charts">
-          Charts
+        <SiderCell key="charts" keyName="charts">
+          <Link to={Routes.products.root}>
+            {" "}
+            <Text className="text-black">LogOut</Text>
+          </Link>
+        </SiderCell>
+        <SiderCell key="charts" keyName="charts">
+          <Link to={Routes.setting.root}>
+            {" "}
+            <Text className="text-black">LogOut</Text>
+          </Link>
         </SiderCell>
       </Menu>
     </View>

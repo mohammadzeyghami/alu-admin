@@ -7,7 +7,7 @@ import MainSidebar from "./components/molecules/Sidebars/MainSidebar";
 function App() {
   const router = createBrowserRouter([
     {
-      path: Routes.dashboard.root,
+      path: Routes.overview.root,
       element: (
         <MainDashLayout
           header={

@@ -1,24 +1,22 @@
 import { Menu, MenuItemProps } from "antd";
 import React from "react";
+import { useActivelocation } from "../../../scripts/useActiveLocation";
+
 interface MySiderCell extends MenuItemProps {
   childern?: React.ReactNode;
-  selectedKey: string;
   key: string;
   keyName: string;
 }
-const SiderCell = ({
-  children,
-  selectedKey,
-  keyName,
-  ...rest
-}: MySiderCell) => {
+const SiderCell = ({ children, keyName = "/home", ...rest }: MySiderCell) => {
+  const active = useActivelocation({ target: keyName });
+
   const { Item } = Menu;
-  console.log({ keyName });
+
   return (
     <Item
       className={`${
-        selectedKey === keyName
-          ? "  border-r-4 border-primary-light w-full hover:!bg-[white] "
+        active
+          ? "  border-r-4 border-primary-light w-full  hover:!bg-[white] "
           : "hover:!bg-[white] bg-[white] "
       } `}
       {...rest}
