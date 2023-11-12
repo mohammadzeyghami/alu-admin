@@ -1,27 +1,24 @@
 const Routes = {
   dashboard: {
-    root: "/home",
+    root: "/dashboard",
 
     posts: {
-      root: "/posts",
-      edit: "/posts/edit",
-      add: "/posts/add",
-      remove: "/posts/remove",
+      root: "/dashboard/posts",
+      edit: "/dashboard/posts/edit",
+      add: "/dashboard/posts/add",
     },
     categories: {
-      root: "/categories",
-      edit: "/categories/edit",
-      add: "/categories/add",
-      remove: "/categories/remove",
+      root: "/dashboard/categories",
+      edit: "/dashboard/categories/edit",
+      add: "/dashboard/categories/add",
     },
     products: {
-      root: "/products",
-      edit: "/products/edit",
-      add: "/products/add",
-      remove: "/products/remove",
+      root: "/dashboard/products",
+      edit: "/dashboard/products/edit",
+      add: "/dashboard/products/add",
     },
     setting: {
-      root: "/setting",
+      root: "/dashboard/settings",
     },
   },
 };

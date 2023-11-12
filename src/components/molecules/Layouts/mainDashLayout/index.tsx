@@ -20,11 +20,11 @@ const MainDashLayout = ({
 }: MainDashProps) => {
   return (
     <Layout className="h-full min-h-[100vh]">
-      <Header>{header}</Header>
+      <Header className="bg-inherit">{header}</Header>
       <Layout hasSider>
         <Sider className="h-full ">{sidebar}</Sider>
-        <Content>{children}</Content>
-        <Footer>{footer}</Footer>
+        <Content className="w-full flex-1">{children}</Content>
+        <Footer className="w-full flex-1">{footer}</Footer>
       </Layout>
     </Layout>
   );

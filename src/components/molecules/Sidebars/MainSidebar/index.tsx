@@ -19,8 +19,8 @@ const MainSidebar = () => {
       <Menu
         onClick={handleMenuClick}
         selectedKeys={[selectedKey]}
-        mode="vertical"
-        className="w-full"
+        mode={"inline"}
+        className=" px-4 w-full"
       >
         <SiderCell
           key="home"
@@ -30,8 +30,8 @@ const MainSidebar = () => {
         />
 
         <SiderCell
-          key="categories"
-          text="categories"
+          key="category"
+          text="category"
           to={Routes.dashboard.categories.root}
           keyName="categories"
         />

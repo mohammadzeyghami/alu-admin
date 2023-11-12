@@ -26,8 +26,8 @@ const SiderCell = ({
     <Item
       className={`${
         active
-          ? "  border-r-4 border-primary-light w-full  hover:!bg-[white] "
-          : "hover:!bg-[white] bg-[white] "
+          ? "  border-r-4 border-primary-light w-full !bg-primary-light  "
+          : "hover:!bg-primary-superlight !bg-white "
       } `}
       {...rest}
     >

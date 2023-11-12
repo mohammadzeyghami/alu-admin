@@ -9,7 +9,8 @@ export default {
         },
         primary: {
           main: "#7166F9",
-          light: "#7166F9",
+          light: "rgba(28, 28, 28, 0.05)",
+          superlight: "rgba(28, 28, 28, 0.02)",
         },
       },
     },
