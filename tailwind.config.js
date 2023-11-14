@@ -1,18 +1,10 @@
+import colors from "./tailwindColors";
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: {
-        gray: {
-          light: "#F6F6FB",
-        },
-        primary: {
-          main: "#7166F9",
-          light: "rgba(28, 28, 28, 0.05)",
-          superlight: "rgba(28, 28, 28, 0.02)",
-        },
-      },
+      colors,
     },
   },
   plugins: [],
