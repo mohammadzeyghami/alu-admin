@@ -1,6 +1,5 @@
 import { Routes as Router, Route } from "react-router-dom";
-
-import { MainProducts } from "./product";
+import { MainProducts } from "../product";
 
 const DashboardRoutes = () => {
   return (

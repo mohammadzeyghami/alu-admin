@@ -10,6 +10,7 @@ export interface MainDashProps {
   children?: React.ReactNode;
   sidebar?: React.ReactNode;
   header?: React.ReactNode;
+  rightBar?: React.ReactNode;
 }
 
 const MainDashLayout = ({
@@ -17,15 +18,17 @@ const MainDashLayout = ({
   children,
   sidebar,
   header,
+  rightBar,
 }: MainDashProps) => {
   return (
     <Layout className="h-full min-h-[100vh]">
-      <Header className="bg-inherit">{header}</Header>
-      <Layout hasSider>
-        <Sider className="h-full ">{sidebar}</Sider>
+      <Sider className="h-full ">{sidebar}</Sider>
+      <Layout>
+        <Header className="bg-inherit w-full px-0">{header}</Header>
         <Content className="w-full flex-1">{children}</Content>
         <Footer className="w-full flex-1">{footer}</Footer>
       </Layout>
+      <Sider className="h-full ">{rightBar}</Sider>
     </Layout>
   );
 };

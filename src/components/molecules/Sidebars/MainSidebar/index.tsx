@@ -14,7 +14,7 @@ const MainSidebar = () => {
   return (
     <View
       vertical
-      className="h-full bg-white min-h-[calc(100vh-66px)] items-center pt-[24px]"
+      className="h-full bg-white min-h-[100vh] items-center pt-[24px]"
     >
       <Menu
         onClick={handleMenuClick}
@@ -26,7 +26,8 @@ const MainSidebar = () => {
           key="home"
           text="home"
           to={Routes.dashboard.root}
-          keyName="home"
+          keyName="dashboard"
+          isWrapper
         />
 
         <SiderCell

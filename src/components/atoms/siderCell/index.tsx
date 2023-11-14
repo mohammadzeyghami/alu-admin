@@ -10,15 +10,17 @@ interface MySiderCell extends MenuItemProps {
   keyName: string;
   text: string;
   to: string;
+  isWrapper?: boolean;
 }
 const SiderCell = ({
   children,
   text,
+  isWrapper,
   to,
   keyName = "/home",
   ...rest
 }: MySiderCell) => {
-  const active = useActivelocation({ target: keyName });
+  const active = useActivelocation({ target: keyName, isWrapper: isWrapper });
 
   const { Item } = Menu;
 
