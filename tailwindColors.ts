@@ -9,4 +9,10 @@ export default {
     light: "rgba(28, 28, 28, 0.05)",
     superlight: "rgba(28, 28, 28, 0.02)",
   },
+  blue: {
+    main: "#E3F5FF",
+  },
+  purple: {
+    main: "#E5ECF6",
+  },
 };

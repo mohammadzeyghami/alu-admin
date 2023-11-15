@@ -12,16 +12,14 @@ const MainSidebar = () => {
     setSelectedKey(e?.key);
   };
   return (
-    <View
-      vertical
-      className="h-full bg-white min-h-[100vh] items-center pt-[24px]"
-    >
+    <View vertical className="h-full  items-center">
       <Menu
         onClick={handleMenuClick}
         selectedKeys={[selectedKey]}
         mode={"inline"}
-        className=" px-4 w-full"
+        className=" py-4 w-full !border-none"
       >
+        <View className="mb-8">portfolio</View>
         <SiderCell
           key="home"
           text="home"

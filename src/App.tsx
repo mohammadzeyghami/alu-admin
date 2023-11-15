@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes as Router } from "react-router-dom";
 import { MainDashLayout, NavbarDashboardMain } from "./components/molecules";
-import MainSidebar from "./components/molecules/Sidebars/MainSidebar";
+import MainSidebar from "./components/molecules/Sidebars/mainSidebar";
 import {
   CategoriesRoutes,
   DashboardRoutes,
@@ -9,6 +9,7 @@ import {
   ProductRoutes,
 } from "./components/pages";
 import Routes from "./routes";
+import { MainRightbar } from "./components/molecules/Sidebars/mainRightbar";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <MainDashLayout
               header={<NavbarDashboardMain />}
               sidebar={<MainSidebar />}
+              rightBar={<MainRightbar />}
             >
               <DashboardRoutes />
             </MainDashLayout>
