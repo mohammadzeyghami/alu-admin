@@ -26,8 +26,11 @@ const MainDashLayout = ({
         {sidebar}
       </Sider>
       <Layout>
-        <Header className="bg-inherit w-full p-4">{header}</Header>
-        <Content className="w-full flex-1 min-h-[100vh]  overflow-y-scroll">
+        <Header className="bg-inherit w-[calc(100vw-360px)] mx-auto p-4 ">
+          {" "}
+          {header}
+        </Header>
+        <Content className="w-full flex-1 min-h-[calc(100vh-60px)]  overflow-y-scroll">
           {children}
         </Content>
         <Footer className="w-full flex-1">{footer}</Footer>
