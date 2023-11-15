@@ -21,14 +21,20 @@ const MainDashLayout = ({
   rightBar,
 }: MainDashProps) => {
   return (
-    <Layout className="h-full min-h-[100vh]">
-      <Sider className="h-full !bg-white min-h-[100vh]  p-4 ">{sidebar}</Sider>
+    <Layout className="!h-[100vh] overflow-hidden">
+      <Sider className="h-full !bg-white min-h-[100vh] !fixed  p-4 ">
+        {sidebar}
+      </Sider>
       <Layout>
         <Header className="bg-inherit w-full p-4">{header}</Header>
-        <Content className="w-full flex-1">{children}</Content>
+        <Content className="w-full flex-1 min-h-[100vh]  overflow-y-scroll">
+          {children}
+        </Content>
         <Footer className="w-full flex-1">{footer}</Footer>
       </Layout>
-      <Sider className="h-full !bg-white min-h-[100vh]  p-4">{rightBar}</Sider>
+      <Sider className="h-full !bg-white min-h-[100vh] right-0 !fixed p-4">
+        {rightBar}
+      </Sider>
     </Layout>
   );
 };

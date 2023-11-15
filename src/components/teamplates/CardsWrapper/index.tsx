@@ -7,7 +7,7 @@ interface MYCardProps {
 }
 const CardsWrapper = ({ items }: MYCardProps) => {
   return (
-    <View className="gap-4 w-full flex-wrap">
+    <View className="gap-6 w-full justify-between flex-wrap">
       {items.map(({ LeftBody, LeftHeader, Right, className }, index) => (
         <CardHeader
           LeftBody={LeftBody}
