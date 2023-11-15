@@ -7,6 +7,7 @@ import {
   OverviewMain,
   PostsRoutes,
   ProductRoutes,
+  UsersRoots,
 } from "./components/pages";
 import Routes from "./routes";
 import { MainRightbar } from "./components/molecules/Sidebars/mainRightbar";
@@ -24,6 +25,18 @@ function App() {
               rightBar={<MainRightbar />}
             >
               <DashboardRoutes />
+            </MainDashLayout>
+          }
+        />
+        <Route
+          path={Routes.dashboard.users.root}
+          element={
+            <MainDashLayout
+              header={<NavbarDashboardMain />}
+              sidebar={<MainSidebar />}
+              rightBar={<MainRightbar />}
+            >
+              <UsersRoots />
             </MainDashLayout>
           }
         />

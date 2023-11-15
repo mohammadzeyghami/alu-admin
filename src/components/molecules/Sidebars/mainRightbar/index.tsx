@@ -22,7 +22,7 @@ const MainRightbar = () => {
         className=" px-4 w-full"
       >
         <View vertical className="pb-4">
-          <Text className="pb-6">Notification</Text>
+          <Text className="pb-6 text-[16px] font-semibold">Notification</Text>
           <MenuItemMain className="!px-0">sample</MenuItemMain>
           <MenuItemMain className="!px-0">sample</MenuItemMain>
           <MenuItemMain className="!px-0">sample</MenuItemMain>
@@ -30,7 +30,7 @@ const MainRightbar = () => {
           <MenuItemMain className="!px-0">sample</MenuItemMain>
         </View>
         <View vertical className="pb-4">
-          <Text className="pb-6">Notification</Text>
+          <Text className="pb-6  text-[16px] font-semibold">Notification</Text>
           <MenuItemMain className="!px-0">sample</MenuItemMain>
           <MenuItemMain className="!px-0">sample</MenuItemMain>
           <MenuItemMain className="!px-0">sample</MenuItemMain>
@@ -38,7 +38,7 @@ const MainRightbar = () => {
           <MenuItemMain className="!px-0">sample</MenuItemMain>
         </View>
         <View vertical className="pb-4">
-          <Text className="pb-6">Notification</Text>
+          <Text className="pb-6  text-[16px] font-semibold">Notification</Text>
           <MenuItemMain className="!px-0">sample</MenuItemMain>
           <MenuItemMain className="!px-0">sample</MenuItemMain>
           <MenuItemMain className="!px-0">sample</MenuItemMain>

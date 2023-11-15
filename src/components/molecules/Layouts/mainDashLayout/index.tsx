@@ -30,7 +30,7 @@ const MainDashLayout = ({
           {" "}
           {header}
         </Header>
-        <Content className="w-full flex-1 min-h-[calc(100vh-60px)]  overflow-y-scroll">
+        <Content className="w-full flex-1 min-h-[calc(100vh-60px)]   overflow-y-scroll">
           {children}
         </Content>
         <Footer className="w-full flex-1">{footer}</Footer>

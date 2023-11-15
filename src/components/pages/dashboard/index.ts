@@ -3,4 +3,5 @@ export * from "./overview";
 export * from "./categories";
 export * from "./posts";
 export * from "./products";
+export * from "./users";
 export * from "./root";

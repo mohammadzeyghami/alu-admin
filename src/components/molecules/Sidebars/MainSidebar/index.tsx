@@ -1,5 +1,5 @@
 import { Menu } from "antd";
-import { SiderCell, View } from "../../..";
+import { SiderCell, Text, View } from "../../..";
 
 import { useState } from "react";
 
@@ -19,13 +19,21 @@ const MainSidebar = () => {
         mode={"inline"}
         className=" py-4 w-full !border-none"
       >
-        <View className="mb-8">portfolio</View>
+        <View className="mb-8 ">
+          <Text className="text-[18px]">Portfolio</Text>
+        </View>
         <SiderCell
           key="home"
           text="home"
           to={Routes.dashboard.root}
           keyName="dashboard"
           isWrapper
+        />
+        <SiderCell
+          key="users"
+          text="users"
+          to={Routes.dashboard.users.root}
+          keyName="users"
         />
 
         <SiderCell

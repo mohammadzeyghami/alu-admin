@@ -12,6 +12,11 @@ const Routes = {
       edit: "/dashboard/categories/edit",
       add: "/dashboard/categories/add",
     },
+    users: {
+      root: "/dashboard/users",
+      edit: "/dashboard/users/edit",
+      add: "/dashboard/users/add",
+    },
     products: {
       root: "/dashboard/products",
       edit: "/dashboard/products/edit",
