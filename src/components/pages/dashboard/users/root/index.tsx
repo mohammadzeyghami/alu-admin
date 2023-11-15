@@ -1,10 +1,11 @@
 import { Routes as Router, Route } from "react-router-dom";
-import { MainUser } from "../main";
+
+import { Users } from "..";
 
 const UsersRoots = () => {
   return (
     <Router>
-      <Route path="*" element={<MainUser />}></Route>
+      <Route path="*" element={<Users />}></Route>
     </Router>
   );
 };
