@@ -1,6 +1,8 @@
 import { Form, Button } from "antd";
 import { Input, Text, View } from "../..";
+import background from "../../../../public/login.jpg";
 import Card from "../../atoms/card";
+import { Link } from "react-router-dom";
 
 const LogIn = () => {
   const onFinish = (values: any) => {
@@ -8,7 +10,12 @@ const LogIn = () => {
   };
 
   return (
-    <View className="items-center flex justify-center w-full min-h-[100vh]">
+    <View className="items-center flex justify-center w-full min-h-[100vh] bg-gray-main">
+      <img
+        src={background}
+        alt="login"
+        className="absolute w-full h-[50vh] top-0"
+      />
       <Card className="w-[440px] mx-auto">
         <Text className="mb-4 text-[16px] font-bold">Login</Text>
         <Form
@@ -37,10 +44,16 @@ const LogIn = () => {
             <Input label="password" type="password" />
           </Form.Item>
 
-          <Form.Item className="mx-auto mt-6">
-            <Button htmlType="submit">Register</Button>
+          <Form.Item className="mx-auto mt-3 ">
+            <Button htmlType="submit">log in</Button>
           </Form.Item>
         </Form>
+        <View className="gap-2 ">
+          <Text className="text-[12px]">Don't have an account?</Text>
+          <Link to={"/sign-in"} className="text-blue-600 text-[12px]">
+            Sign Up
+          </Link>
+        </View>
       </Card>
     </View>
   );

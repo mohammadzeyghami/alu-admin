@@ -1,9 +1,12 @@
-import { TableColoumn, TableMain, Text, View } from "../../../..";
+import { PageWrapper, TableColoumn, TableMain, Text } from "../../../..";
 import { ButtonPrimary } from "../../../../atoms/button/primary";
 
 const Users = () => {
   return (
-    <View vertical className="min-h-[calc(100vh-200px)] w-full p-6 pt-[40px]">
+    <PageWrapper
+      vertical
+      className="min-h-[calc(100vh-200px)] w-full max-w-[1200px] mx-auto  p-6 pt-[40px]"
+    >
       <Text className="mb-4 text-[16px] font-semibold">Users Table</Text>
       <TableMain
         className=" w-full "
@@ -80,7 +83,7 @@ const Users = () => {
           )}
         />
       </TableMain>
-    </View>
+    </PageWrapper>
   );
 };
 

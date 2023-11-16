@@ -1,4 +1,4 @@
-import { View } from "../../../..";
+import { PageWrapper, View } from "../../../..";
 import Card from "../../../../atoms/card";
 import CardsWrapper from "../../../../teamplates/CardsWrapper";
 export interface MyCardsWrapper {
@@ -35,7 +35,7 @@ const Items: MyCardsWrapper[] = [
 ];
 const MainProducts = () => {
   return (
-    <View vertical className="p-6 max-w-[1150px] mx-auto  overflow-y-auto">
+    <PageWrapper vertical className="overflow-y-auto">
       <CardsWrapper items={Items} />
       <View className="w-full gap-6 mt-6 ">
         <Card className="max-w-[662px] w-full min-h-[330px] bg-gray-main">
@@ -51,7 +51,7 @@ const MainProducts = () => {
         <Card className=" min-h-[330px] w-[60%] bg-gray-main">chart</Card>
         <Card className=" min-h-[330px] w-[40%] bg-gray-main">chart</Card>
       </View>
-    </View>
+    </PageWrapper>
   );
 };
 

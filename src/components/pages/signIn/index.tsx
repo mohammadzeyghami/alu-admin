@@ -1,6 +1,7 @@
 import { Form, Button } from "antd";
 import { Input, Text, View } from "../..";
 import Card from "../../atoms/card";
+import background from "../../../../public/login.jpg";
 
 const SignIn = () => {
   const onFinish = (values: any) => {
@@ -8,8 +9,13 @@ const SignIn = () => {
   };
 
   return (
-    <View className="items-center flex justify-center w-full min-h-[100vh]">
-      <Card className="w-[440px] mx-auto">
+    <View className="items-center flex justify-center w-full min-h-[100vh] relative bg-gray-main">
+      <img
+        src={background}
+        alt="login"
+        className="absolute w-full h-[50vh] top-0"
+      />
+      <Card className="w-[440px] mx-auto ">
         <Text className="mb-4 text-[16px] font-bold">Register</Text>
         <Form
           name="registration"
@@ -59,13 +65,11 @@ const SignIn = () => {
               }),
             ]}
           >
-            <Input label="password" type="password" />
+            <Input label="confirm password" type="password" />
           </Form.Item>
 
           <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-            <Button type="primary" htmlType="submit">
-              Register
-            </Button>
+            <Button htmlType="submit">Register</Button>
           </Form.Item>
         </Form>
       </Card>
