@@ -49,7 +49,7 @@ const UserPage = () => {
               <Input
                 {...field}
                 placeholder="userName"
-                className="w-full max-w-[500px] mt-4"
+                className="w-full !max-w-[500px] mt-4"
               />
             )}
           />
@@ -58,7 +58,11 @@ const UserPage = () => {
             name="email"
             control={control}
             render={({ field }) => (
-              <Input {...field} placeholder="Email" className="w-full mt-4" />
+              <Input
+                {...field}
+                placeholder="Email"
+                className="w-full mt-4 !max-w-[500px]"
+              />
             )}
           />
           <Controller
@@ -68,7 +72,7 @@ const UserPage = () => {
               <Input
                 {...field}
                 placeholder="Password"
-                className="w-full mt-4"
+                className="w-full mt-4 !max-w-[500px]"
               />
             )}
           />
@@ -79,7 +83,7 @@ const UserPage = () => {
               <Input
                 {...field}
                 placeholder="Confirm Password"
-                className="w-full mt-4"
+                className="w-full mt-4 !max-w-[500px]"
               />
             )}
           />

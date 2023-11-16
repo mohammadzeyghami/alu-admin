@@ -1,7 +1,6 @@
 const Routes = {
   dashboard: {
     root: "/dashboard",
-
     posts: {
       root: "/dashboard/posts",
       edit: "/dashboard/posts/edit",
@@ -25,6 +24,12 @@ const Routes = {
     setting: {
       root: "/dashboard/settings",
     },
+  },
+  login: {
+    root: "/login",
+  },
+  signIn: {
+    root: "/sign-in",
   },
 };
 

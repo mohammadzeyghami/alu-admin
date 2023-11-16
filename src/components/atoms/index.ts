@@ -6,3 +6,4 @@ export * from "./text";
 export * from "./view";
 export * from "./siderCell";
 export * from "./Input";
+export * from "./table";
