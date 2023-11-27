@@ -1,6 +1,7 @@
 export interface IconProps {
   color?: string;
   width?: string;
+  className?: string;
   height?: string;
 }
 const HomeIcon = ({
