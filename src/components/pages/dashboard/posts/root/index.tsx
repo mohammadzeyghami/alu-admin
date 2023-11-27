@@ -1,11 +1,16 @@
 import { View } from "../../../..";
 
-import { PostCard } from "../../../../molecules/cards/postCard";
+import { ProductCard } from "../../../../molecules/cards/productCard";
 
 const Posts = () => {
   return (
-    <View vertical>
-      <PostCard />
+    <View className="mt-[50px] gap-5 flex flex-wrap">
+      {/* <PostCard /> */}
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
+      <ProductCard />
     </View>
   );
 };
