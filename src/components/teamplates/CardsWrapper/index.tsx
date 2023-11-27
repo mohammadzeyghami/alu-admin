@@ -10,6 +10,7 @@ const CardsWrapper = ({ items }: MYCardProps) => {
     <View className="gap-6 w-full justify-between flex-wrap">
       {items.map(({ LeftBody, LeftHeader, Right, className }, index) => (
         <CardHeader
+          key={index}
           LeftBody={LeftBody}
           LeftHeader={LeftHeader}
           Right={Right}

@@ -1,4 +1,4 @@
-import { PageWrapper, TableColoumn, TableMain, Text } from "../../../..";
+import { PageWrapper, TableColoumn, TableMain, Text, View } from "../../../..";
 import { ButtonPrimary } from "../../../../atoms/button/primary";
 
 const Users = () => {
@@ -10,38 +10,45 @@ const Users = () => {
       <Text className="mb-4 text-[16px] font-semibold">Users Table</Text>
       <TableMain
         className=" w-full "
+        rowKey={(item) => item.id}
         dataSource={[
           {
+            id: 6,
             username: "mohammad",
             password: "test",
             email: "zeighami@gmail",
             role: "admin",
           },
           {
+            id: 5,
             username: "mohammad",
             password: "test",
             email: "zeighami@gmail",
             role: "admin",
           },
           {
+            id: 4,
             username: "mohammad",
             password: "test",
             email: "zeighami@gmail",
             role: "admin",
           },
           {
+            id: 3,
             username: "mohammad",
             password: "test",
             email: "zeighami@gmail",
             role: "admin",
           },
           {
+            id: 2,
             username: "mohammad",
             password: "test",
             email: "zeighami@gmail",
             role: "admin",
           },
           {
+            id: 1,
             username: "mohammad",
             password: "test",
             email: "zeighami@gmail",
@@ -54,32 +61,36 @@ const Users = () => {
           dataIndex="email"
           key="email"
           sorter
-          render={(item) => <Text>{item}</Text>}
+          render={(item, key) => <Text key={item + key.id}>{item}</Text>}
         />
         <TableColoumn
           title="UserName"
           dataIndex="username"
           key="username"
           sorter
-          render={(item) => <Text>{item}</Text>}
+          render={(item, key) => <Text key={item + key.id}>{item}</Text>}
         />
         <TableColoumn
           title="Role"
           dataIndex="role"
           key="role"
           sorter
-          render={(item) => <Text>{item}</Text>}
+          render={(item, key) => <Text key={item || "-" + key.id}>{item}</Text>}
         />
         <TableColoumn
           title="Edit"
           dataIndex="edit"
           key="edit"
           sorter
-          render={() => (
-            <>
-              <ButtonPrimary type="link">Edit</ButtonPrimary>
-              <ButtonPrimary type="link">Delete</ButtonPrimary>
-            </>
+          render={(item, key) => (
+            <View key={`edit-view-${key.id}`}>
+              <ButtonPrimary type="link" key={`delete-${key.id}`}>
+                Edit
+              </ButtonPrimary>
+              <ButtonPrimary type="link" key={`edit-${key.id}`}>
+                Delete
+              </ButtonPrimary>
+            </View>
           )}
         />
       </TableMain>
