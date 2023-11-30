@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .ant-card-body {
-  padding: 4px !important;
+  padding: 0 !important;
 }
