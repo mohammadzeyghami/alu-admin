@@ -36,6 +36,26 @@ const dataSource = [
     customData: "Custom Data 1",
     anotherCustomData: "Another Custom Data 1",
     expandContent: "Expandable Content 1",
+    children: [
+      {
+        key: "123",
+        name: "John Doe",
+        age: 28,
+        customData: "Custom Data 1",
+        anotherCustomData: "Another Custom Data 1",
+        expandContent: "Expandable Content 1",
+        children: [
+          {
+            key: "1234",
+            name: "John Doe",
+            age: 28,
+            customData: "Custom Data 1",
+            anotherCustomData: "Another Custom Data 1",
+            expandContent: "Expandable Content 1",
+          },
+        ],
+      },
+    ],
   },
   {
     key: "2",
@@ -46,7 +66,7 @@ const dataSource = [
     expandContent: "Expandable Content 2",
   },
   {
-    key: "1",
+    key: "4",
     name: "John Doe",
     age: 28,
     customData: "Custom Data 1",
@@ -54,7 +74,7 @@ const dataSource = [
     expandContent: "Expandable Content 1",
   },
   {
-    key: "2",
+    key: "5",
     name: "Jane Doe",
     age: 32,
     customData: "Custom Data 2",
@@ -62,7 +82,7 @@ const dataSource = [
     expandContent: "Expandable Content 2",
   },
   {
-    key: "1",
+    key: "6",
     name: "John Doe",
     age: 28,
     customData: "Custom Data 1",
@@ -70,7 +90,7 @@ const dataSource = [
     expandContent: "Expandable Content 1",
   },
   {
-    key: "2",
+    key: "7",
     name: "Jane Doe",
     age: 32,
     customData: "Custom Data 2",
@@ -78,7 +98,7 @@ const dataSource = [
     expandContent: "Expandable Content 2",
   },
   {
-    key: "1",
+    key: "8",
     name: "John Doe",
     age: 28,
     customData: "Custom Data 1",
@@ -86,7 +106,7 @@ const dataSource = [
     expandContent: "Expandable Content 1",
   },
   {
-    key: "2",
+    key: "9",
     name: "Jane Doe",
     age: 32,
     customData: "Custom Data 2",
@@ -94,7 +114,7 @@ const dataSource = [
     expandContent: "Expandable Content 2",
   },
   {
-    key: "1",
+    key: "11",
     name: "John Doe",
     age: 28,
     customData: "Custom Data 1",
@@ -102,7 +122,7 @@ const dataSource = [
     expandContent: "Expandable Content 1",
   },
   {
-    key: "2",
+    key: "22",
     name: "Jane Doe",
     age: 32,
     customData: "Custom Data 2",
@@ -110,7 +130,7 @@ const dataSource = [
     expandContent: "Expandable Content 2",
   },
   {
-    key: "1",
+    key: "31",
     name: "John Doe",
     age: 28,
     customData: "Custom Data 1",
@@ -118,7 +138,7 @@ const dataSource = [
     expandContent: "Expandable Content 1",
   },
   {
-    key: "2",
+    key: "42",
     name: "Jane Doe",
     age: 32,
     customData: "Custom Data 2",
