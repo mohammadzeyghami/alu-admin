@@ -1,13 +1,20 @@
 import { Route, Routes as Router } from "react-router-dom";
-import {
-  DashboardRoutes,
-  MainDashLayout,
-  NavbarDashboardMain,
-  OverviewMain,
-  PostsRoutes,
-  ProductRoutes,
-  UsersRoots,
-} from "../../..";
+import { lazy } from "react";
+import { MainDashLayout, NavbarDashboardMain } from "../../..";
+//lazy loading
+const DashboardRoutes = lazy(
+  () => import("../../../pages/dashboard/root/index")
+);
+
+const OverviewMain = lazy(
+  () => import("../../../pages/dashboard/overview/main")
+);
+const PostsRoutes = lazy(() => import("../../../pages/dashboard/posts/main"));
+const ProductRoutes = lazy(
+  () => import("../../../pages/dashboard/products/main")
+);
+const UsersRoots = lazy(() => import("../../../pages/dashboard/users/root"));
+//componenets
 import MainSidebar from "../../../molecules/Sidebars/mainSidebar";
 import { MainRightbar } from "../../../molecules/Sidebars/mainRightbar";
 import Routes from "../../../../routes";

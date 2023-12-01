@@ -2,7 +2,7 @@ import { Content } from "antd/es/layout/layout";
 import { Sider } from "../../..";
 import Header from "../../../atoms/header";
 import Layout from "../../../atoms/layout";
-
+import React, { Suspense } from "react";
 import Footer from "../../../atoms/footer";
 
 export interface MainDashProps {
@@ -20,6 +20,7 @@ const MainDashLayout = ({
   header,
   rightBar,
 }: MainDashProps) => {
+  const LoadingFallback = () => <div>Loading...</div>;
   return (
     <Layout>
       <Sider className=" !bg-white min-h-[100vh] fixed p-4 z-10 ">
@@ -31,7 +32,7 @@ const MainDashLayout = ({
           {header}
         </Header>
         <Content className="w-full flex-1 min-h-[calc(100vh-120px)] mt-[60px] ">
-          {children}
+          <Suspense fallback={<LoadingFallback />}>{children}</Suspense>
         </Content>
         <Footer className="w-full flex-1">{footer}</Footer>
       </Layout>

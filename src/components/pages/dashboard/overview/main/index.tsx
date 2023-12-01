@@ -2,4 +2,4 @@ const OverviewMain = () => {
   return <div>Overview</div>;
 };
 
-export { OverviewMain };
+export default OverviewMain;

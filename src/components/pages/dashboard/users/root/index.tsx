@@ -10,4 +10,4 @@ const UsersRoots = () => {
   );
 };
 
-export { UsersRoots };
+export default UsersRoots;

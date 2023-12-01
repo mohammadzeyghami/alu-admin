@@ -84,7 +84,7 @@ const Users = () => {
           dataIndex="edit"
           key="edit"
           sorter
-          render={(item, key) => (
+          render={(_, key) => (
             <View key={`edit-view-${key.id}`}>
               <ButtonPrimary
                 onClick={() => setOpen(true)}

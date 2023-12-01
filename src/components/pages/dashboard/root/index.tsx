@@ -9,4 +9,4 @@ const DashboardRoutes = () => {
   );
 };
 
-export { DashboardRoutes };
+export default DashboardRoutes;

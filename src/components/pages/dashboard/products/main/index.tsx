@@ -17,7 +17,7 @@ const CustomTable = ({ dataSource }: any) => {
       <Table.Column
         title="Details"
         key="details"
-        render={(text, record: any) => (
+        render={(_, record: any) => (
           <div>
             <p>{`${record.customData} - ${record.anotherCustomData}`}</p>
           </div>
@@ -156,4 +156,4 @@ const ProductRoutes = () => {
   );
 };
 
-export { ProductRoutes };
+export default ProductRoutes;

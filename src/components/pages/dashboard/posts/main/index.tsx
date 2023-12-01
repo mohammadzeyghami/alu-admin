@@ -11,4 +11,4 @@ const PostsRoutes = () => {
   );
 };
 
-export { PostsRoutes };
+export default PostsRoutes;
