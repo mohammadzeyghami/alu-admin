@@ -1,7 +1,9 @@
 import { PageWrapper, TableColoumn, TableMain, Text, View } from "../../../..";
 import { ButtonPrimary } from "../../../../atoms/button/primary";
-
+import { Modal } from "../../../../atoms/modal";
+import { useState } from "react";
 const Users = () => {
+  const [open, setOpen] = useState(false);
   return (
     <PageWrapper
       vertical
@@ -84,7 +86,11 @@ const Users = () => {
           sorter
           render={(item, key) => (
             <View key={`edit-view-${key.id}`}>
-              <ButtonPrimary type="link" key={`delete-${key.id}`}>
+              <ButtonPrimary
+                onClick={() => setOpen(true)}
+                type="link"
+                key={`delete-${key.id}`}
+              >
                 Edit
               </ButtonPrimary>
               <ButtonPrimary type="link" key={`edit-${key.id}`}>
@@ -94,6 +100,14 @@ const Users = () => {
           )}
         />
       </TableMain>
+      <Modal
+        open={open}
+        onOk={() => setOpen(false)}
+        onCancel={() => setOpen(false)}
+      >
+        {" "}
+        this is test modal
+      </Modal>
     </PageWrapper>
   );
 };

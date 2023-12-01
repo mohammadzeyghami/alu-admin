@@ -12,7 +12,7 @@ const MainSidebar = () => {
     setSelectedKey(e?.key);
   };
   return (
-    <View vertical className="h-full  items-center">
+    <View vertical className="h-full fixed items-center">
       <Menu
         onClick={handleMenuClick}
         selectedKeys={[selectedKey]}

@@ -2,11 +2,6 @@
 // import InfiniteScroll from "react-infinite-scroll-component";
 // import "./app.css";
 
-// import { useState } from "react";
-// import InfiniteScroll from "react-infinite-scroll-component";
-// import { View } from "../../../..";
-// import { PostCard } from "../../../../molecules/cards/postCard";
-
 // const getUsers = async ({ pageParam = 0 }) => {};
 
 // const Something = () => {
@@ -52,33 +47,44 @@
 // export default Something;
 
 import { useState } from "react";
-
 import InfiniteScroll from "react-infinite-scroll-component";
-import { PostCard } from "../../../../molecules/cards/postCard";
-import { PageWrapper } from "../../../..";
+import { PostCard } from "../../components/molecules/cards/postCard";
+import { View } from "../../components";
 
-export const Posts = () => {
-  const [items, setItems] = useState(Array.from({ length: 10 }));
+const staticData = [
+  { id: 1, name: "Item 1" },
+  { id: 2, name: "Item 2" },
+  { id: 3, name: "Item 3" },
+  // Add more items as needed
+];
+
+const InfiniteScrollComponent = () => {
+  const [items, setItems] = useState(staticData);
 
   const fetchMoreData = () => {
-    console.log("Fetching more data...");
+    // Simulate fetching more data (in a real-world scenario, you'd make an API call here)
     setTimeout(() => {
-      setItems((prevItems) => prevItems.concat(Array.from({ length: 10 })));
-    }, 1500);
+      setItems((prevItems) => [...prevItems, ...staticData]);
+    }, 1000);
   };
 
   return (
-    <PageWrapper>
+    <View className="h-[100vh] overflow-y-auto">
       <InfiniteScroll
         dataLength={items.length}
+        className="w-full"
         next={fetchMoreData}
-        hasMore={true} // Ensure this is always true until all items are loaded
-        loader={<h4>Loading...</h4>}
+        hasMore={true} // Set to true to simulate infinite data
+        loader={<p>Loading more...</p>}
       >
-        {items.map((_, index) => (
-          <PostCard key={index} />
+        {items.map(() => (
+          <View className="w-full">
+            <PostCard />
+          </View>
         ))}
       </InfiniteScroll>
-    </PageWrapper>
+    </View>
   );
 };
+
+export default InfiniteScrollComponent;
