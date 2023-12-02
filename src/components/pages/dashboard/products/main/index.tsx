@@ -9,7 +9,7 @@ const ProductRoutes = () => {
   return (
     <Router>
       <Route index element={<Products />} />
-      <Route path={"product/:id"} element={<ProductDynamic />} />
+      <Route path={"add"} element={<ProductDynamic />} />
     </Router>
   );
 };

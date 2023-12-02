@@ -1,4 +1,4 @@
-import { Route, Routes as Router } from "react-router-dom";
+import { Navigate, Route, Routes as Router } from "react-router-dom";
 import { lazy } from "react";
 import { MainDashLayout, NavbarDashboardMain } from "../../..";
 //lazy loading
@@ -67,8 +67,8 @@ const PrivateRoutes = ({
             </MainDashLayout>
           }
         />
-        <Route
-          path={Routes.dashboard.categories.root}
+        {/* <Route
+          path={"/dashboard/overview"}
           element={
             <MainDashLayout
               header={<NavbarDashboardMain />}
@@ -77,9 +77,9 @@ const PrivateRoutes = ({
               <OverviewMain />
             </MainDashLayout>
           }
-        />
+        /> */}
         <Route
-          path={"dashboard/products/*"}
+          path={"/dashboard/products/*"}
           element={
             <MainDashLayout
               header={<NavbarDashboardMain />}
@@ -124,6 +124,8 @@ const PrivateRoutes = ({
         />
       </Router>
     );
+  } else {
+    return <Navigate to={Routes.login.root} />;
   }
 };
 

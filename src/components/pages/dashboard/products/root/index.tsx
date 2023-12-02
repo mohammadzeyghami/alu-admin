@@ -1,5 +1,5 @@
 import { Table } from "antd";
-import { PageWrapper, View } from "../../../..";
+import { Input, PageWrapper, View } from "../../../..";
 
 const CustomTable = () => {
   // Sample data
@@ -149,6 +149,12 @@ const Products = () => {
   return (
     <View>
       <PageWrapper>
+        <View className="w-full items-center ">
+          <Input
+            className="ms-auto w-[250px]"
+            placeholder="Search Your Product ..."
+          />
+        </View>
         <CustomTable />
       </PageWrapper>
     </View>
