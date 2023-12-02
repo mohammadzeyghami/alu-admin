@@ -19,6 +19,7 @@ import MainSidebar from "../../../molecules/Sidebars/mainSidebar";
 import { MainRightbar } from "../../../molecules/Sidebars/mainRightbar";
 import Routes from "../../../../routes";
 import { EditUser } from "../setting";
+
 interface MyPrivateprops {
   isAuthenticated: boolean;
   userRoles: string[];
@@ -32,7 +33,7 @@ const PrivateRoutes = ({
     return (
       <Router>
         <Route
-          path={"*"}
+          path={"/*"}
           element={
             <MainDashLayout
               header={<NavbarDashboardMain />}
@@ -78,7 +79,7 @@ const PrivateRoutes = ({
           }
         />
         <Route
-          path={Routes.dashboard.products.root}
+          path={"dashboard/products/*"}
           element={
             <MainDashLayout
               header={<NavbarDashboardMain />}

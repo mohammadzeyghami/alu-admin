@@ -2,7 +2,7 @@ import React from "react";
 import { Card as AntdCard, CardProps } from "antd";
 interface MyCardProps extends CardProps {
   children: React.ReactNode;
-  className: string;
+  className?: string;
 }
 const Card = ({ children, className, ...rest }: MyCardProps) => {
   return (

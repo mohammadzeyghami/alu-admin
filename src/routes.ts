@@ -18,6 +18,7 @@ const Routes = {
     },
     products: {
       root: "/dashboard/products",
+      dynamic: "/dashboard/products/product/:id",
       edit: "/dashboard/products/edit",
       add: "/dashboard/products/add",
     },
