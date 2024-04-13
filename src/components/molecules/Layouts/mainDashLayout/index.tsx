@@ -23,7 +23,7 @@ const MainDashLayout = ({
 }: MainDashProps) => {
   return (
     <Layout>
-      <Sider className=" !bg-white min-h-[100vh] fixed p-4 z-10 ">
+      <Sider className="!bg-white min-h-[100vh] fixed p-4 z-10 ">
         {sidebar}
       </Sider>
       <Layout>

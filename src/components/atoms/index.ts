@@ -8,4 +8,4 @@ export * from "./siderCell";
 export * from "./Input";
 export * from "./pageWrapper";
 export * from "./table";
-export * from "./typography";
+// export * from "./typography";
