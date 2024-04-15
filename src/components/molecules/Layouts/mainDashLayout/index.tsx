@@ -36,9 +36,9 @@ const MainDashLayout = ({
         </Content>
         <Footer className="w-full flex-1">{footer}</Footer>
       </Layout>
-      <Sider className=" !bg-white min-h-[100vh] fixed p-4 z-10">
+      {/* <Sider className=" !bg-white min-h-[100vh] fixed p-4 z-10">
         {rightBar}
-      </Sider>
+      </Sider> */}
     </Layout>
   );
 };
